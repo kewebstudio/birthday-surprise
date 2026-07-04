@@ -14,144 +14,151 @@ export default function FinalScreen({ onReplay }: Props) {
     <Background>
       <ProgressBar current={8} total={8} />
 
-      <div className="relative z-20 flex h-full w-full flex-col items-center justify-start px-6 pt-10 pb-8 text-center">
+      <div className="relative z-20 flex h-full w-full flex-col items-center justify-center px-5 py-6 text-center">
 
-        {/* Celebration Badge */}
+        {/* Badge */}
+
         <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="rounded-full bg-white/70 px-5 py-2 shadow-lg backdrop-blur-xl"
+          initial={{
+            opacity: 0,
+            scale: 0.8,
+          }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+          className="rounded-full border border-pink-100 bg-white/85 px-5 py-2 shadow-lg backdrop-blur-xl"
         >
-          <span className="text-xs font-semibold tracking-[0.25em] text-pink-600">
+          <span className="text-[10px] font-semibold tracking-[0.22em] text-pink-600">
             🎉 CELEBRATION COMPLETE 🎉
           </span>
         </motion.div>
 
-        {/* Animated Heart */}
+        {/* Heart */}
+
         <motion.div
           animate={{
-            scale: [1, 1.2, 1],
-            rotate: [-5, 5, -5],
+            scale: [1, 1.12, 1],
           }}
           transition={{
             repeat: Infinity,
-            duration: 2,
+            duration: 1.8,
           }}
-          className="mt-7"
+          className="mt-4"
         >
           <FaHeart
-            className="text-pink-500 drop-shadow-[0_10px_25px_rgba(236,72,153,.35)]"
-            size={72}
+            size={48}
+            className="text-pink-500 drop-shadow-xl"
           />
         </motion.div>
 
         {/* Heading */}
+
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="mt-6 text-5xl font-bold text-pink-700"
-          style={{ fontFamily: "Playfair Display" }}
-        >
-          Happy Birthday
-        </motion.h1>
-
-        {/* Name */}
-<motion.h2
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ delay: 0.45 }}
-  className="mt-2 px-2 pb-3 leading-[1.25] text-center text-7xl md:text-8xl overflow-visible"
-  style={{
-    fontFamily: "Great Vibes",
-    fontWeight: 400,
-    background:
-      "linear-gradient(90deg,#ec4899,#fb7185,#ec4899)",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-    textShadow: "0 5px 18px rgba(236,72,153,.30)",
-  }}
->
-  Clara
-</motion.h2>
-
-        {/* Blessing Card */}
-        <motion.div
           initial={{
             opacity: 0,
-            y: 30,
+            y: 15,
           }}
           animate={{
             opacity: 1,
             y: 0,
           }}
           transition={{
-            delay: 0.8,
+            delay: 0.2,
           }}
-          className="mt-7 w-full max-w-md rounded-[32px] bg-white/75 p-6 shadow-2xl backdrop-blur-xl"
+          className="mt-3 text-3xl font-bold text-pink-700"
+          style={{
+            fontFamily: "Playfair Display",
+          }}
         >
-          <p className="text-[15px] leading-8 text-gray-700">
-            May this birthday fill your heart with joy,
-            your life with peace,
-            and your future with endless success.
-          </p>
+          Happy Birthday
+        </motion.h1>
 
-          <p className="mt-5 text-[15px] leading-8 text-gray-700">
-            May every dream become reality,
-            every prayer be answered,
-            and every day bring another reason to smile.
-          </p>
+        {/* Name */}
 
-          <motion.p
-            animate={{
-              scale: [1, 1.03, 1],
-            }}
-            transition={{
-              repeat: Infinity,
-              duration: 2,
-            }}
-            className="mt-6 text-lg font-semibold text-pink-600"
-          >
-            May God bless you today,
-            tomorrow and always. ❤️
-          </motion.p>
-        </motion.div>
-
-        {/* Celebration Icons */}
-        <motion.div
+        <motion.h2
+          initial={{
+            opacity: 0,
+          }}
           animate={{
-            scale: [1, 1.1, 1],
-            opacity: [0.6, 1, 0.6],
+            opacity: 1,
           }}
           transition={{
-            repeat: Infinity,
-            duration: 2,
+            delay: 0.4,
           }}
-          className="mt-6 text-3xl"
+          className="mt-1 text-center text-5xl leading-tight sm:text-6xl"
+          style={{
+            fontFamily: "Great Vibes",
+            background:
+              "linear-gradient(90deg,#ec4899,#fb7185,#ec4899)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            textShadow:
+              "0 5px 18px rgba(236,72,153,.30)",
+          }}
         >
-          🎂 ✨ 🌸 🎈 💖 ✨
-        </motion.div>
+          Clara
+        </motion.h2>
 
-        {/* Replay Button */}
-        <div className="mt-auto w-full max-w-sm pt-8">
+        {/* Blessing Card */}
+
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            delay: 0.6,
+          }}
+          className="mt-5 w-full max-w-sm rounded-3xl border border-pink-100 bg-white/85 p-5 shadow-xl backdrop-blur-xl"
+        >
+          <p className="text-sm leading-7 text-gray-700">
+            May God fill your life with
+            happiness, peace, love and
+            countless blessings.
+          </p>
+
+          <p className="mt-3 text-sm leading-7 text-gray-700">
+            Keep smiling, stay blessed,
+            and may all your dreams
+            come true. ❤️
+          </p>
+        </motion.div>
+                {/* Button */}
+
+        <div className="mt-5 w-full max-w-sm">
+
           <NextButton
-            title="🎁 Watch Again"
+            title="🎁 WATCH AGAIN"
             onClick={onReplay}
           />
+
+          <motion.p
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              delay: 0.8,
+            }}
+            className="mt-4 text-center text-xs text-pink-500"
+          >
+            Made with ❤️ especially for Clara
+          </motion.p>
+
         </div>
 
-        {/* Footer */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.4 }}
-          className="mt-6 text-sm text-pink-500"
-        >
-          Made with ❤️ especially for Clara
-        </motion.p>
-
       </div>
+
     </Background>
   );
 }
