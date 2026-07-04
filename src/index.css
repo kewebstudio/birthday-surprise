@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------- GOOGLE FONTS ---------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------------- RESET ---------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------- ROOT ---------------- */
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+/* ---------------- BODY ---------------- */
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    180deg,
+    #fff8fc 0%,
+    #ffeef7 55%,
+    #ffe3f1 100%
+  );
+
+  color: #374151;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------------- HEADINGS ---------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  line-height: 1.2;
+}
+
+/* ---------------- BUTTONS ---------------- */
+
+button {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+button:active {
+  transform: scale(.98);
+}
+
+/* ---------------- IMAGES ---------------- */
+
+img {
+  display: block;
+  max-width: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ---------------- LINKS ---------------- */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------------- SELECTION ---------------- */
+
+::selection {
+  background: #f472b6;
+  color: white;
+}
+
+/* ---------------- SCROLLBAR ---------------- */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff5fa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f472b6;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ec4899;
+}
+
+/* ---------------- UTILITIES ---------------- */
+
+.glass {
+  background: rgba(255,255,255,.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,.4);
+}
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #ec4899,
+    #fb7185,
+    #ec4899
+  );
+
+  background-size: 200%;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shadow-pink {
+  box-shadow:
+    0 20px 45px rgba(236,72,153,.15);
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 640px) {
+
+  body {
+    font-size: 15px;
+  }
+
+}

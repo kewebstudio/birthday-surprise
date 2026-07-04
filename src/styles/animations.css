@@ -1,0 +1,343 @@
+/* ---------------- FLOAT ---------------- */
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ---------------- PULSE ---------------- */
+
+@keyframes pulseSlow {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+.pulse-slow {
+  animation: pulseSlow 2.8s ease-in-out infinite;
+}
+
+/* ---------------- HEART ---------------- */
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  15% { transform: scale(1.15); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.heartbeat {
+  animation: heartbeat 1.6s infinite;
+}
+
+/* ---------------- FADE ---------------- */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp .8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn .8s ease forwards;
+}
+
+/* ---------------- ZOOM ---------------- */
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.zoom-in {
+  animation: zoomIn .7s ease forwards;
+}
+
+/* ---------------- SHAKE ---------------- */
+
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+}
+
+.shake {
+  animation: shake .7s ease;
+}
+
+/* ---------------- GLOW ---------------- */
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 rgba(236,72,153,.2);
+  }
+
+  50% {
+    box-shadow:
+      0 0 18px rgba(236,72,153,.45),
+      0 0 40px rgba(236,72,153,.2);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rgba(236,72,153,.2);
+  }
+}
+
+.glow {
+  animation: glow 2.5s ease-in-out infinite;
+}
+
+/* ---------------- ROTATE ---------------- */
+
+@keyframes rotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-slow {
+  animation: rotateSlow 20s linear infinite;
+}
+
+/* ---------------- SPARKLE ---------------- */
+
+@keyframes sparkle {
+  0% {
+    opacity: .2;
+    transform: translateY(0) scale(.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1);
+  }
+
+  100% {
+    opacity: .2;
+    transform: translateY(0) scale(.8);
+  }
+}
+
+.sparkle {
+  animation: sparkle 2.2s ease-in-out infinite;
+}
+
+/* ---------------- SHIMMER BUTTON ---------------- */
+
+@keyframes shine {
+  from {
+    left: -120%;
+  }
+
+  to {
+    left: 130%;
+  }
+}
+
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 50%;
+  height: 100%;
+  transform: skewX(-25deg);
+  background: rgba(255,255,255,.35);
+  animation: shine 2.8s infinite;
+}
+
+/* ---------------- PETALS ---------------- */
+
+@keyframes petalFall {
+
+  0% {
+    transform:
+      translateY(-120px)
+      translateX(0)
+      rotate(0deg);
+
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  50% {
+    transform:
+      translateY(50vh)
+      translateX(18px)
+      rotate(180deg);
+  }
+
+  100% {
+    transform:
+      translateY(110vh)
+      translateX(-18px)
+      rotate(360deg);
+
+    opacity: 0;
+  }
+
+}
+
+.petal {
+  position: absolute;
+  pointer-events: none;
+  animation: petalFall 10s linear infinite;
+}
+
+/* ---------------- BALLOONS ---------------- */
+
+@keyframes balloonFloat {
+  from {
+    transform:
+      translateY(120vh)
+      rotate(-4deg);
+  }
+
+  to {
+    transform:
+      translateY(-120vh)
+      rotate(4deg);
+  }
+}
+
+.balloon {
+  animation: balloonFloat 10s linear infinite;
+}
+
+/* ---------------- GRADIENT TEXT ---------------- */
+
+@keyframes gradientMove {
+  from {
+    background-position: 0%;
+  }
+
+  to {
+    background-position: 200%;
+  }
+}
+
+.gradient-text {
+
+  background: linear-gradient(
+    90deg,
+    #ec4899,
+    #fb7185,
+    #ec4899
+  );
+
+  background-size: 200%;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradientMove 4s linear infinite;
+
+}
+
+/* ---------------- GLASS ---------------- */
+
+.glass {
+
+  background: rgba(255,255,255,.35);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255,255,255,.35);
+
+}
+
+/* ---------------- HIDE SCROLLBAR ---------------- */
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+/* ---------------- SOFT BOUNCE ---------------- */
+
+@keyframes softBounce {
+
+  0%,100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+}
+
+.soft-bounce {
+  animation: softBounce 2.5s ease-in-out infinite;
+}
+
+/* ---------------- FLOAT GLOW ---------------- */
+
+@keyframes floatingGlow {
+
+  0% {
+    opacity: .3;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: .8;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: .3;
+    transform: scale(1);
+  }
+
+}
+
+.floating-glow {
+  animation: floatingGlow 3s ease-in-out infinite;
+}
