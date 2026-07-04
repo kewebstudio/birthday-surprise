@@ -16,7 +16,7 @@ export default function BirthdayWish({ onNext }: Props) {
     <Background>
       <ProgressBar current={2} total={8} />
 
-      <div className="relative z-20 flex h-full w-full flex-col justify-between px-5 py-5">
+      <div className="relative z-20 flex h-full w-full flex-col justify-between px-5 pt-6 pb-5">
 
         {/* Top Section */}
         <div className="flex flex-col items-center text-center">
@@ -28,7 +28,7 @@ export default function BirthdayWish({ onNext }: Props) {
             transition={{ duration: 0.6 }}
             className="rounded-full border border-pink-100 bg-white/85 px-5 py-2 shadow-lg backdrop-blur-lg"
           >
-            <span className="text-[11px] font-semibold tracking-[0.22em] text-pink-600">
+            <span className="text-[10px] font-semibold tracking-[0.22em] text-pink-600">
               ✨ TODAY IS YOUR SPECIAL DAY ✨
             </span>
           </motion.div>
@@ -42,7 +42,7 @@ export default function BirthdayWish({ onNext }: Props) {
             animate={{
               opacity: 1,
               scale: 1,
-              y: [0, -6, 0],
+              y: [0, -5, 0],
             }}
             transition={{
               duration: 0.8,
@@ -51,7 +51,7 @@ export default function BirthdayWish({ onNext }: Props) {
                 duration: 3,
               },
             }}
-            className="relative mt-5"
+            className="relative mt-4"
           >
             <div className="absolute inset-0 rounded-full bg-pink-300/25 blur-2xl" />
 
@@ -62,7 +62,7 @@ export default function BirthdayWish({ onNext }: Props) {
               alt="Clara"
               loading="lazy"
               decoding="async"
-              className="relative h-44 w-44 rounded-full border-[6px] border-white object-cover shadow-2xl sm:h-52 sm:w-52 md:h-56 md:w-56"
+              className="relative h-40 w-40 rounded-full border-[6px] border-white object-cover shadow-2xl sm:h-44 sm:w-44"
             />
           </motion.div>
 
@@ -70,7 +70,7 @@ export default function BirthdayWish({ onNext }: Props) {
           <motion.h1
             initial={{
               opacity: 0,
-              y: 20,
+              y: 18,
             }}
             animate={{
               opacity: 1,
@@ -79,7 +79,7 @@ export default function BirthdayWish({ onNext }: Props) {
             transition={{
               delay: 0.25,
             }}
-            className="mt-5 text-center text-3xl font-bold text-pink-700 sm:text-4xl"
+            className="mt-4 text-center text-3xl font-bold text-pink-700"
             style={{
               fontFamily: "Playfair Display",
             }}
@@ -100,7 +100,7 @@ export default function BirthdayWish({ onNext }: Props) {
             transition={{
               delay: 0.45,
             }}
-            className="mt-1 px-2 pb-2 text-center text-5xl leading-[1.25] sm:text-6xl md:text-7xl"
+            className="mt-1 text-center text-5xl leading-tight"
             style={{
               fontFamily: "Great Vibes",
               fontWeight: 400,
@@ -108,16 +108,17 @@ export default function BirthdayWish({ onNext }: Props) {
                 "linear-gradient(90deg,#ec4899,#fb7185,#ec4899)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
-              textShadow: "0 5px 20px rgba(236,72,153,.25)",
+              textShadow: "0 5px 18px rgba(236,72,153,.25)",
             }}
           >
             Clara
           </motion.h2>
-                    {/* Message Card */}
+
+          {/* Message Card */}
           <motion.div
             initial={{
               opacity: 0,
-              y: 20,
+              y: 18,
             }}
             animate={{
               opacity: 1,
@@ -126,17 +127,17 @@ export default function BirthdayWish({ onNext }: Props) {
             transition={{
               delay: 0.7,
             }}
-            className="mt-5 w-full max-w-sm rounded-3xl border border-pink-100 bg-white/85 p-5 shadow-xl backdrop-blur-xl"
+            className="mt-4 w-full max-w-sm rounded-3xl border border-pink-100 bg-white/85 p-4 shadow-xl backdrop-blur-xl"
           >
-            <p className="text-sm leading-7 text-gray-700 sm:text-[15px]">
+            <p className="text-sm leading-6 text-gray-700">
               Today is a celebration of your beautiful heart,
               your wonderful smile and every blessing that
               makes you so special.
             </p>
 
-            <div className="my-4 h-px w-full bg-gradient-to-r from-transparent via-pink-200 to-transparent" />
+            <div className="my-3 h-px w-full bg-gradient-to-r from-transparent via-pink-200 to-transparent" />
 
-            <p className="text-sm leading-7 text-gray-700 sm:text-[15px]">
+            <p className="text-sm leading-6 text-gray-700">
               May God fill your life with endless happiness,
               peace, love, success and unforgettable
               memories. May every dream in your heart
@@ -148,49 +149,37 @@ export default function BirthdayWish({ onNext }: Props) {
           {/* Hearts */}
           <motion.div
             animate={{
-              scale: [1, 1.12, 1],
+              scale: [1, 1.1, 1],
             }}
             transition={{
               repeat: Infinity,
               duration: 1.6,
             }}
-            className="mt-5 flex items-center gap-3"
+            className="mt-4 flex items-center gap-3"
           >
-            <FaHeart
-              className="text-pink-300"
-              size={20}
-            />
-
-            <FaHeart
-              className="text-pink-500"
-              size={30}
-            />
-
-            <FaHeart
-              className="text-pink-300"
-              size={20}
-            />
+            <FaHeart className="text-pink-300" size={18} />
+            <FaHeart className="text-pink-500" size={26} />
+            <FaHeart className="text-pink-300" size={18} />
           </motion.div>
 
           {/* Hint */}
           <motion.p
             animate={{
-              y: [0, -4, 0],
+              y: [0, -3, 0],
               opacity: [0.6, 1, 0.6],
             }}
             transition={{
               repeat: Infinity,
               duration: 1.4,
             }}
-            className="mt-4 text-sm font-semibold text-pink-600"
+            className="mt-3 text-sm font-semibold text-pink-600"
           >
             👇 Tap below to continue your birthday journey
           </motion.p>
 
         </div>
-
-        {/* Bottom */}
-        <div className="w-full">
+                {/* Bottom */}
+        <div className="w-full pt-2 pb-2">
 
           <div className="mx-auto w-full max-w-sm">
             <NextButton
@@ -209,7 +198,7 @@ export default function BirthdayWish({ onNext }: Props) {
             transition={{
               delay: 1,
             }}
-            className="mt-4 text-center text-xs text-pink-500"
+            className="mt-3 text-center text-[11px] text-pink-500"
           >
             Every page holds another beautiful surprise 🌸
           </motion.p>
@@ -217,6 +206,7 @@ export default function BirthdayWish({ onNext }: Props) {
         </div>
 
       </div>
+
     </Background>
   );
 }

@@ -54,50 +54,22 @@ export default function LoadingScreen({
     <section className="relative flex h-screen w-full items-center justify-center overflow-hidden bg-gradient-to-b from-[#FFF8FC] via-[#FFEAF5] to-[#FFDCEB]">
 
       {/* Background Glow */}
-      <div className="absolute left-1/2 top-1/2 h-[480px] w-[480px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-pink-300/20 blur-[120px]" />
+      <div className="absolute left-1/2 top-1/2 h-[430px] w-[430px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-pink-300/20 blur-[120px]" />
 
       {/* Floating Sparkles */}
 
       <motion.div
         animate={{
-          y: [0, -18, 0],
-          opacity: [0.4, 1, 0.4],
+          y: [0, -14, 0],
+          opacity: [0.5, 1, 0.5],
         }}
         transition={{
           repeat: Infinity,
           duration: 3,
         }}
-        className="absolute left-12 top-16 text-3xl"
+        className="absolute left-10 top-12 text-2xl"
       >
         ✨
-      </motion.div>
-
-      <motion.div
-        animate={{
-          y: [0, 18, 0],
-          opacity: [0.3, 1, 0.3],
-        }}
-        transition={{
-          repeat: Infinity,
-          duration: 4,
-        }}
-        className="absolute right-10 top-24 text-4xl"
-      >
-        🌸
-      </motion.div>
-
-      <motion.div
-        animate={{
-          y: [0, -14, 0],
-          opacity: [0.4, 1, 0.4],
-        }}
-        transition={{
-          repeat: Infinity,
-          duration: 3.5,
-        }}
-        className="absolute bottom-24 left-10 text-3xl"
-      >
-        💖
       </motion.div>
 
       <motion.div
@@ -107,29 +79,56 @@ export default function LoadingScreen({
         }}
         transition={{
           repeat: Infinity,
+          duration: 4,
+        }}
+        className="absolute right-10 top-16 text-3xl"
+      >
+        🌸
+      </motion.div>
+
+      <motion.div
+        animate={{
+          y: [0, -10, 0],
+          opacity: [0.4, 1, 0.4],
+        }}
+        transition={{
+          repeat: Infinity,
           duration: 3,
         }}
-        className="absolute bottom-20 right-12 text-3xl"
+        className="absolute bottom-16 left-10 text-2xl"
+      >
+        💖
+      </motion.div>
+
+      <motion.div
+        animate={{
+          y: [0, 10, 0],
+          opacity: [0.4, 1, 0.4],
+        }}
+        transition={{
+          repeat: Infinity,
+          duration: 3,
+        }}
+        className="absolute bottom-14 right-10 text-2xl"
       >
         ✨
       </motion.div>
 
       <div className="relative z-20 flex w-full max-w-md flex-col items-center px-6">
-
-        {/* Clara Image */}
+                {/* Clara Image */}
 
         <motion.div
           initial={{
             opacity: 0,
-            scale: 0.8,
+            scale: 0.85,
           }}
           animate={{
             opacity: 1,
             scale: 1,
-            y: [0, -8, 0],
+            y: [0, -6, 0],
           }}
           transition={{
-            duration: 0.8,
+            duration: 0.7,
             y: {
               repeat: Infinity,
               duration: 3,
@@ -137,14 +136,14 @@ export default function LoadingScreen({
           }}
           className="relative"
         >
-          <div className="absolute inset-0 rounded-full bg-pink-300/40 blur-[60px]" />
+          <div className="absolute inset-0 rounded-full bg-pink-300/35 blur-[45px]" />
 
-          <div className="absolute -inset-2 rounded-full border border-pink-200/70" />
+          <div className="absolute -inset-2 rounded-full border border-pink-200/60" />
 
           <img
             src={clara1}
             alt="Clara"
-            className="relative h-40 w-40 rounded-full border-[8px] border-white object-cover shadow-[0_25px_70px_rgba(236,72,153,.28)]"
+            className="relative h-32 w-32 rounded-full border-8 border-white object-cover shadow-[0_18px_50px_rgba(236,72,153,.25)]"
           />
         </motion.div>
 
@@ -152,31 +151,39 @@ export default function LoadingScreen({
 
         <motion.div
           animate={{
-            y: [0, -8, 0],
-            rotate: [-4, 4, -4],
+            y: [0, -6, 0],
+            rotate: [-3, 3, -3],
           }}
           transition={{
             repeat: Infinity,
-            duration: 2.8,
+            duration: 2.6,
           }}
-          className="relative mt-4"
+          className="relative mt-3"
         >
-          <div className="absolute inset-0 rounded-full bg-pink-300/30 blur-[40px]" />
+          <div className="absolute inset-0 rounded-full bg-pink-300/30 blur-[35px]" />
 
           <img
             src={gift}
             alt="Gift"
-            className="relative w-20 drop-shadow-[0_20px_60px_rgba(236,72,153,.30)]"
+            className="relative w-16 drop-shadow-[0_18px_40px_rgba(236,72,153,.28)]"
           />
         </motion.div>
 
         {/* Heading */}
 
         <motion.h1
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mt-7 text-center text-4xl font-bold text-pink-700"
+          initial={{
+            opacity: 0,
+            y: 15,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+          className="mt-4 text-center text-3xl font-bold text-pink-700"
           style={{
             fontFamily: "Playfair Display",
           }}
@@ -185,21 +192,28 @@ export default function LoadingScreen({
           <br />
           Birthday Surprise
         </motion.h1>
-                {/* Clara Name */}
+
+        {/* Name */}
 
         <motion.h2
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="mt-2 px-2 pb-3 text-center text-5xl leading-[1.25] overflow-visible"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.25,
+          }}
+          className="mt-1 text-center text-4xl leading-tight"
           style={{
             fontFamily: "Great Vibes",
-            fontWeight: 400,
             background:
               "linear-gradient(90deg,#ec4899,#fb7185,#ec4899)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
-            textShadow: "0 6px 20px rgba(236,72,153,.30)",
+            textShadow:
+              "0 5px 18px rgba(236,72,153,.30)",
           }}
         >
           Clara
@@ -208,12 +222,21 @@ export default function LoadingScreen({
         {/* Card */}
 
         <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          className="mt-5 w-full rounded-[28px] bg-white/80 p-6 shadow-2xl backdrop-blur-xl"
+          initial={{
+            opacity: 0,
+            y: 15,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            delay: 0.4,
+          }}
+          className="mt-4 w-full rounded-3xl bg-white/85 p-5 shadow-xl backdrop-blur-xl"
         >
           <AnimatePresence mode="wait">
+
             <motion.p
               key={messageIndex}
               initial={{
@@ -229,56 +252,43 @@ export default function LoadingScreen({
                 y: -10,
               }}
               transition={{
-                duration: 0.35,
+                duration: 0.3,
               }}
-              className="text-center text-[15px] leading-7 text-gray-700"
+              className="text-center text-sm leading-6 text-gray-700"
             >
               {loadingTexts[messageIndex]}
             </motion.p>
+
           </AnimatePresence>
 
-          {/* Progress */}
+          <div className="mt-5">
 
-          <div className="mt-7">
-
-            <div className="h-3 overflow-hidden rounded-full bg-pink-100">
+            <div className="h-2 overflow-hidden rounded-full bg-pink-100">
 
               <motion.div
                 className="h-full rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600"
                 animate={{
                   width: `${progress}%`,
                 }}
-                transition={{
-                  ease: "linear",
-                }}
               />
 
             </div>
 
-            {/* Percentage */}
+            <div className="mt-4 flex justify-center">
 
-            <motion.div
-              animate={{
-                scale: [1, 1.05, 1],
-              }}
-              transition={{
-                repeat: Infinity,
-                duration: 1.5,
-              }}
-              className="mt-5 flex justify-center"
-            >
-              <div className="rounded-full bg-pink-100 px-6 py-2 shadow-lg">
-                <span className="text-xl font-bold text-pink-700">
+              <div className="rounded-full bg-pink-100 px-5 py-1.5 shadow">
+
+                <span className="text-lg font-bold text-pink-700">
                   {progress}%
                 </span>
+
               </div>
-            </motion.div>
+
+            </div>
 
           </div>
 
         </motion.div>
-
-        {/* Bottom Text */}
 
         <motion.p
           animate={{
@@ -288,18 +298,22 @@ export default function LoadingScreen({
             repeat: Infinity,
             duration: 1.8,
           }}
-          className="mt-7 text-center text-sm font-medium text-pink-600"
+          className="mt-4 text-center text-sm text-pink-600"
         >
-          Please wait while we prepare something magical for you ✨
+          Please wait while we prepare something magical ✨
         </motion.p>
 
-        {/* Footer */}
-
         <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="mt-3 text-center text-xs text-pink-500"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.8,
+          }}
+          className="mt-2 text-center text-xs text-pink-500"
         >
           Made with ❤️ especially for Clara
         </motion.p>
