@@ -10,15 +10,15 @@ export default function ProgressBar({
   total,
 }: ProgressBarProps) {
   return (
-    <div className="absolute top-5 left-5 right-5 z-50 flex gap-2">
+    <div className="absolute top-2 left-4 right-4 z-50 flex gap-1.5">
 
       {Array.from({ length: total }).map((_, index) => (
         <div
           key={index}
-          className="h-1 flex-1 overflow-hidden rounded-full bg-white/30 backdrop-blur-sm"
+          className="h-[3px] flex-1 overflow-hidden rounded-full bg-white/25 backdrop-blur-sm"
         >
           <motion.div
-            className="h-full rounded-full bg-gradient-to-r from-pink-500 to-rose-500"
+            className="h-full rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600"
             initial={{
               width: index < current ? "100%" : "0%",
             }}
@@ -31,7 +31,7 @@ export default function ProgressBar({
                   : "0%",
             }}
             transition={{
-              duration: index === current ? 0.8 : 0,
+              duration: index === current ? 0.7 : 0,
               ease: "easeInOut",
             }}
           />
